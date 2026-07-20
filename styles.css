@@ -320,7 +320,7 @@ section{padding:5.5em 0;}
 .form-field select,
 .form-field textarea{
   width:100%;padding:.75em .9em;border:1px solid var(--line);border-radius:8px;
-  font:inherit;font-size:.96rem;color:var(--ink);background:#fff;
+  font:inherit;font-size:16px;color:var(--ink);background:#fff;
 }
 .form-field textarea{resize:vertical;min-height:110px;}
 .form-field input:focus,
@@ -374,7 +374,7 @@ footer ul a:hover{color:#fff;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
   .footer-grid{grid-template-columns:1fr 1fr;}
   .related-grid{grid-template-columns:1fr 1fr;}
-  .contact-grid{grid-template-columns:1fr;}
+  .cta-strip .contact-grid{grid-template-columns:1fr;}
 }
 @media (max-width: 600px){
   .services-grid{grid-template-columns:1fr;}
