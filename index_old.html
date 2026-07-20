@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mass Roofing & Gutters | Medford, MA Roofing, Siding & Gutters</title>
+<meta name="description" content="Mass Roofing & Gutters provides the highest quality roofing, gutter, and contracting services to homeowners and businesses in the Greater Boston area. Call (781) 874-0095 for a free estimate.">
+<style>
+  :root{
+    --navy:#132743;
+    --navy-dark:#0b1a2c;
+    --blue:#1f5ea8;
+    --blue-light:#3a7fd5;
+    --accent:#f5a623;
+    --accent-dark:#d98c0f;
+    --ink:#1c2733;
+    --ink-soft:#4b5b6b;
+    --paper:#ffffff;
+    --mist:#f4f7fa;
+    --line:#e3e9ef;
+    --radius:14px;
+    --shadow:0 20px 45px -20px rgba(11,26,44,0.35);
+    --shadow-sm:0 8px 20px -10px rgba(11,26,44,0.25);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Georgia','Times New Roman',serif;
+    line-height:1.15;
+    margin:0 0 .5em;
+    color:var(--navy-dark);
+    font-weight:700;
+  }
+  p{margin:0 0 1em;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .container{width:min(1180px,92%);margin-inline:auto;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.78rem;
+    font-weight:700;
+    color:var(--accent-dark);
+    margin-bottom:.6em;
+    display:block;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.5em;
+    padding:.9em 1.7em;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.98rem;
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
+  }
+  .btn-accent{background:var(--accent);color:var(--navy-dark);box-shadow:var(--shadow-sm);}
+  .btn-accent:hover{background:var(--accent-dark);transform:translateY(-2px);}
+  .btn-outline{border-color:rgba(255,255,255,.55);color:#fff;}
+  .btn-outline:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+  .btn-navy{background:var(--navy);color:#fff;}
+  .btn-navy:hover{background:var(--navy-dark);transform:translateY(-2px);}
+
+  /* ===== Top bar ===== */
+  .topbar{
+    background:var(--navy-dark);
+    color:#cdd8e4;
+    font-size:.85rem;
+  }
+  .topbar .container{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:.5em 0;
+    flex-wrap:wrap;
+    gap:.4em;
+  }
+  .topbar a{color:#cdd8e4;}
+  .topbar .phone{font-weight:700;color:#fff;}
+  .topbar .social{display:flex;gap:.7em;}
+  .topbar .social img{height:16px;width:16px;filter:grayscale(1) brightness(1.6);opacity:.85;}
+
+  /* ===== Header / Nav ===== */
+  header.site-header{
+    background:#fff;
+    position:sticky;top:0;z-index:50;
+    box-shadow:0 2px 14px rgba(11,26,44,.08);
+  }
+  .nav-wrap{
+    
+    display:flex;align-items:center;justify-content:space-between;
+    padding:.7em 0;
+    gap:1.5em;
+  }
+  .brand{display:flex;align-items:center;gap:.7em;}
+  .brand img{height:54px;width:auto;}
+  nav.main-nav ul{
+    list-style:none;display:flex;gap:1.9em;margin:0;padding:0;
+    font-weight:600;font-size:.94rem;color:var(--navy);
+  }
+  nav.main-nav a{padding:.4em 0;border-bottom:2px solid transparent;transition:border-color .15s, color .15s;}
+  nav.main-nav a:hover{border-color:var(--accent);color:var(--blue);}
+  .header-cta{display:flex;align-items:center;gap:1.1em;}
+  .header-cta .call{font-weight:700;color:var(--navy-dark);font-size:1.05rem;white-space:nowrap;}
+  .header-cta .call span{display:block;font-size:.72rem;font-weight:600;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.08em;}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--navy);cursor:pointer;}
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    color:#fff;
+    min-height:88vh;
+    display:flex;align-items:center;
+    background:linear-gradient(120deg,rgba(11,26,44,.88),rgba(19,39,67,.62)), url('website_graphics/hero-roof.jpg') center/cover no-repeat;
+  }
+  .hero .container{padding-block:5em;}
+  .hero-content{max-width:680px;}
+  .hero h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.4rem);margin-bottom:.4em;}
+  .hero p.lead{font-size:1.15rem;color:#dbe4ee;max-width:560px;margin-bottom:1.6em;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:1em;align-items:center;margin-bottom:2em;}
+  .hero-call{
+    display:flex;align-items:center;gap:.7em;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.28);
+    padding:.7em 1.3em;border-radius:999px;
+  }
+  .hero-call .num{font-size:1.15rem;font-weight:800;color:var(--accent);}
+  .hero-badges{display:flex;gap:1.8em;flex-wrap:wrap;margin-top:1.5em;}
+  .hero-badges div{font-size:.85rem;color:#cbd7e3;border-left:3px solid var(--accent);padding-left:.7em;}
+  .hero-badges strong{display:block;color:#fff;font-size:1rem;}
+
+  /* ===== Trust strip ===== */
+  .trust-strip{background:var(--mist);border-bottom:1px solid var(--line);}
+  .trust-strip .container{
+    display:flex;flex-wrap:wrap;gap:2.2em;justify-content:space-between;align-items:center;
+    padding:1.1em 0;font-size:.88rem;color:var(--ink-soft);font-weight:600;
+  }
+  .trust-strip .item{display:flex;align-items:center;gap:.6em;}
+  .trust-strip .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none;}
+
+  /* ===== Section basics ===== */
+  section{padding:5.5em 0;}
+  .section-head{max-width:680px;margin-bottom:2.6em;}
+  .section-head.center{margin-inline:auto;text-align:center;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);}
+  .section-head p{color:var(--ink-soft);font-size:1.05rem;}
+  .bg-mist{background:var(--mist);}
+  .bg-navy{background:var(--navy-dark);color:#e7edf3;}
+  .bg-navy h2,.bg-navy h3{color:#fff;}
+
+  /* ===== Services grid ===== */
+  .services-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1.8em;
+  }
+  .service-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;box-shadow:var(--shadow-sm);
+    display:flex;flex-direction:column;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
+  .service-card .img{height:190px;overflow:hidden;}
+  .service-card .img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+  .service-card:hover .img img{transform:scale(1.07);}
+  .service-card .body{padding:1.5em 1.5em 1.7em;flex:1;display:flex;flex-direction:column;}
+  .service-card h3{font-size:1.2rem;margin-bottom:.4em;}
+  .service-card p{color:var(--ink-soft);font-size:.95rem;flex:1;}
+  .service-card ul{margin:.6em 0 1.2em;padding-left:0;list-style:none;font-size:.9rem;color:var(--ink);}
+  .service-card ul li{padding-left:1.3em;position:relative;margin-bottom:.35em;}
+  .service-card ul li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800;}
+  .card-link{font-weight:700;color:var(--blue);font-size:.92rem;display:inline-flex;align-items:center;gap:.4em;}
+  .card-link:hover{color:var(--navy-dark);}
+  .expand-toggle{background:none;border:none;padding:0;margin-top:auto;cursor:pointer;font-family:inherit;}
+  .expand-toggle .chevron{transition:transform .25s ease;font-size:.8em;}
+  .service-card.expanded .expand-toggle .chevron{transform:rotate(180deg);}
+  .service-card.expanded{grid-column:1 / -1;box-shadow:var(--shadow);}
+  .details{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .details-inner{display:grid;grid-template-columns:.9fr 1.3fr;gap:2em;padding-top:1.6em;margin-top:1.4em;border-top:1px solid var(--line);}
+  .details-media{border-radius:10px;overflow:hidden;min-height:200px;}
+  .details-media img{width:100%;height:100%;object-fit:cover;}
+  .details-text h4{font-size:1.15rem;margin-bottom:.5em;}
+  .details-text p{color:var(--ink-soft);font-size:.95rem;}
+  .details-text ul{list-style:none;padding:0;margin:0 0 1.2em;font-size:.92rem;}
+  .details-text ul li{padding-left:1.3em;position:relative;margin-bottom:.4em;color:var(--ink);}
+  .details-text ul li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800;}
+  @media (max-width: 700px){
+    .details-inner{grid-template-columns:1fr;}
+    .details-media{min-height:160px;}
+  }
+
+  /* ===== About / split ===== */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:3.5em;align-items:center;}
+  .split .media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative;}
+  .split .media img{width:100%;height:100%;object-fit:cover;}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4em;margin-top:2em;}
+  .stat{border-left:3px solid var(--accent);padding-left:1em;}
+  .stat strong{display:block;font-size:2rem;font-family:'Georgia',serif;color:var(--navy-dark);}
+  .stat span{font-size:.85rem;color:var(--ink-soft);}
+
+  /* ===== Feature list rows ===== */
+  .feature-rows{display:flex;flex-direction:column;gap:.2em;margin-top:1.6em;}
+  .feature-row{display:flex;gap:1em;padding:1.1em 0;border-top:1px solid var(--line);}
+  .feature-row:last-child{border-bottom:1px solid var(--line);}
+  .feature-row .icon{
+    flex:none;width:42px;height:42px;border-radius:50%;
+    background:rgba(31,94,168,.1);color:var(--blue);
+    display:flex;align-items:center;justify-content:center;font-weight:800;
+  }
+  .feature-row h4{margin:0 0 .2em;font-size:1.05rem;color:var(--navy-dark);font-family:inherit;}
+  .feature-row p{margin:0;color:var(--ink-soft);font-size:.93rem;}
+
+  /* ===== Financing banner ===== */
+  .financing-banner{
+    background:linear-gradient(100deg,var(--navy) 0%, var(--blue) 100%);
+    color:#fff;border-radius:var(--radius);
+    padding:2.6em;display:flex;align-items:center;justify-content:space-between;gap:2em;flex-wrap:wrap;
+    box-shadow:var(--shadow);
+  }
+  .financing-banner img{height:96px;width:auto;flex:none;}
+  .financing-banner h3{color:#fff;font-size:1.6rem;margin-bottom:.25em;}
+  .financing-banner p{color:#dce6f1;margin:0;}
+  .financing-text{flex:1;min-width:260px;}
+
+  /* ===== Why us ===== */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6em;}
+  .why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:1.8em;}
+  .why-card .num{font-family:'Georgia',serif;font-size:2rem;color:var(--accent);margin-bottom:.3em;}
+  .why-card h4{color:#fff;font-size:1.05rem;margin-bottom:.4em;}
+  .why-card p{color:#b9c6d4;font-size:.9rem;margin:0;}
+
+  /* ===== Testimonials ===== */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8em;}
+  .testi-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8em;box-shadow:var(--shadow-sm);}
+  .stars{color:var(--accent);letter-spacing:.15em;margin-bottom:.7em;font-size:1rem;}
+  .testi-card p{color:var(--ink);font-size:.96rem;}
+  .testi-name{font-weight:700;color:var(--navy-dark);margin-top:1em;font-size:.92rem;}
+
+  /* ===== Gallery ===== */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:.9em;}
+  .gallery-grid a{border-radius:10px;overflow:hidden;display:block;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease;}
+  .gallery-grid a:hover img{transform:scale(1.08);}
+  .gallery-grid .tall{grid-row:span 2;}
+
+  /* ===== Service area ===== */
+  .area-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:3em;align-items:start;}
+  .area-list{columns:3;column-gap:1.6em;font-size:.92rem;color:var(--ink-soft);}
+  .area-list li{margin-bottom:.45em;break-inside:avoid;}
+  .area-list strong{color:var(--navy-dark);}
+
+  /* ===== CTA strip ===== */
+  .cta-strip{
+    background:url('website_graphics/roofing-job-2.jpg') center/cover;
+    position:relative;color:#fff;
+  }
+  .cta-strip::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(11,26,44,.92),rgba(19,39,67,.75));}
+  .cta-strip .container{position:relative;z-index:1;text-align:center;padding:4em 0;}
+  .cta-strip h2{color:#fff;}
+  .cta-strip p{color:#d8e2ec;max-width:600px;margin-inline:auto;}
+  .cta-actions{display:flex;justify-content:center;gap:1em;flex-wrap:wrap;margin-top:1.6em;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy-dark);color:#aebbc9;padding:4.5em 0 0;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2.5em;padding-bottom:3em;border-bottom:1px solid rgba(255,255,255,.08);}
+  footer h4{color:#fff;font-size:1rem;margin-bottom:1em;font-family:inherit;}
+  footer img.foot-logo{height:48px;margin-bottom:1em;filter:brightness(0) invert(1);opacity:.92;}
+  footer p{color:#93a3b4;font-size:.9rem;}
+  footer ul{list-style:none;margin:0;padding:0;}
+  footer ul li{margin-bottom:.6em;font-size:.9rem;}
+  footer ul a:hover{color:#fff;}
+  .foot-social{display:flex;gap:.8em;margin-top:1.2em;}
+  .foot-social a{
+    width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .foot-social img{height:16px;width:16px;filter:brightness(0) invert(1);opacity:.85;}
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1em;
+    padding:1.6em 0;font-size:.82rem;color:#7c8ba0;
+  }
+  .foot-bottom a:hover{color:#fff;}
+
+  /* ===== Mobile ===== */
+  @media (max-width: 980px){
+    nav.main-nav, .header-cta .call{display:none;}
+    .menu-toggle{display:block;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .testi-grid{grid-template-columns:1fr;}
+    .split{grid-template-columns:1fr;}
+    .area-wrap{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width: 600px){
+    .services-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .area-list{columns:1;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .financing-banner{flex-direction:column;text-align:center;}
+    .hero-badges{gap:1em;}
+    section{padding:3.5em 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div>470 Main St., Medford, MA 02155</div>
+    <div style="display:flex;align-items:center;gap:1.4em;">
+      <a class="phone" href="tel:7818740095">(781) 874-0095</a>
+      <div class="social">
+        <a href="#" aria-label="Google"><img src="website_graphics/google-icon.png" alt="Google"></a>
+        <a href="#" aria-label="Yelp"><img src="website_graphics/yelp-icon.png" alt="Yelp"></a>
+        <a href="#" aria-label="Houzz"><img src="website_graphics/houzz-icon.png" alt="Houzz"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="#home" class="brand">
+      <img src="website_graphics/logo.png" alt="Mass Roofing & Gutters logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Roofing</a></li>
+        <li><a href="#gutters">Gutters</a></li>
+        <li><a href="#contracting">Contracting</a></li>
+        <li><a href="#financing">Financing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <div class="call">(781) 874-0095<span>Free Estimates</span></div>
+      <a href="#contact" class="btn btn-navy">Get a Quote</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow" style="color:var(--accent);">Licensed & Insured &middot; MA Lic. #126232</span>
+      <h1>The Roof Over Boston's Head, For More Than Three Decades</h1>
+      <p class="lead">Mass Roofing &amp; Gutters provides the highest quality roofing, gutter, and contracting services to homeowners and businesses across the Greater Boston area.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-accent">Request a Free Estimate</a>
+        <div class="hero-call">
+          <span>Call now</span>
+          <span class="num">(781) 874-0095</span>
+        </div>
+      </div>
+      <div class="hero-badges">
+        <div><strong>30+ Years</strong>Serving Greater Boston</div>
+        <div><strong>Fully Licensed</strong>&amp; Insured Contractor</div>
+        <div><strong>No Job Too Big</strong>or Too Small</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="container">
+    <div class="item"><span class="dot"></span>Free, No-Obligation Estimates</div>
+    <div class="item"><span class="dot"></span>Residential &amp; Commercial</div>
+    <div class="item"><span class="dot"></span>Financing as Low as $99/mo</div>
+    <div class="item"><span class="dot"></span>80+ Massachusetts Communities Served</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">What We Do</span>
+      <h2>Full-Service Roofing &amp; Home Exteriors</h2>
+      <p>From the peak of your roof to the foundation of your house, our team handles projects of every size &mdash; with the industry's best materials and honest, straightforward service.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="img"><img src="website_graphics/roof-shingle-install.jpg" alt="Roofing crew installing new shingles"></div>
+        <div class="body">
+          <h3>Residential Roofing</h3>
+          <p>Full-service roof installations, replacements, and repairs using asphalt, fiberglass, slate, wood/shake shingles, rubber, and composite materials.</p>
+          <ul>
+            <li>Roof Installations</li>
+            <li>Residential &amp; Commercial</li>
+            <li>Roof Replacement &amp; Repair</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/roof-install-team.jpg" alt="Roofing crew installing shingles on a multi-family home"></div>
+              <div class="details-text">
+                <h4>Roofing Materials &amp; Roof Types</h4>
+                <p>Mass Roofing &amp; Gutters is a full-service roofing contractor with expertise across pitched roofs, asphalt and fiberglass shingles, natural slate, wood shingles, flat roofs, composite materials, metal roofing, rubber roofing, and more &mdash; plus the gutters and downspouts to match.</p>
+                <p>Of all roof types, you get reliable protection that's easy on the budget when you choose asphalt shingles. Three-tab composition shingles are a popular, standard material that offer a warranty of 20 years or more and can typically be installed within a day &mdash; a great option for starter homes and quick renovations. Architectural (designer or laminated) shingles cost more but offer extended warranties, a more layered look, and longer wear &mdash; an affordable alternative to slate and cedar shake that delivers the effect of expensive materials at a fraction of the price.</p>
+                <ul>
+                  <li>Ice &amp; water shields on every job</li>
+                  <li>Double coverage along drip edges</li>
+                  <li>Full flashing in leak-prone areas</li>
+                  <li>15-point roof deck &amp; ventilation inspection</li>
+                </ul>
+                <a href="tel:7818740095" class="btn btn-navy">Call (781) 874-0095</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="img"><img src="website_graphics/commercial-roofing.jpg" alt="Aerial view of commercial flat roofing"></div>
+        <div class="body">
+          <h3>Commercial Roofing</h3>
+          <p>Flat roof systems and full replacements for property managers and business owners, with minimal disruption to tenants and operations.</p>
+          <ul>
+            <li>Flat &amp; Low-Slope Roofing</li>
+            <li>EPDM, TPO &amp; Built-Up Systems</li>
+            <li>Inspections &amp; Maintenance Plans</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/copper-roof-porch.jpg" alt="Detailed metal roofing work over a covered porch"></div>
+              <div class="details-text">
+                <h4>Built for Massachusetts Businesses</h4>
+                <p>From flat roof systems to full tear-off replacements, we work with property managers and business owners across Greater Boston to keep commercial buildings weathertight with minimal disruption to tenants and day-to-day operations. Our crews are experienced with EPDM rubber, TPO, and built-up roofing systems on multi-family, mixed-use, and commercial properties.</p>
+                <ul>
+                  <li>Flat &amp; low-slope roofing</li>
+                  <li>EPDM, TPO &amp; built-up systems</li>
+                  <li>Roof inspections &amp; maintenance plans</li>
+                  <li>Minimal disruption to business operations</li>
+                </ul>
+                <a href="tel:7818740095" class="btn btn-navy">Request a Commercial Estimate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="img"><img src="website_graphics/roof-repair.jpg" alt="Contractor repairing a roof edge"></div>
+        <div class="body">
+          <h3>Roof Repair</h3>
+          <p>24-hour emergency service for leaks, storm damage, and everything in between &mdash; before a small problem becomes a big one.</p>
+          <ul>
+            <li>24 Hour Emergency Service</li>
+            <li>Storm, Wind &amp; Hail Damage</li>
+            <li>Snow Removal on Roofs</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/storm-damage-wind.jpg" alt="Storm-damaged roof missing shingles"></div>
+              <div class="details-text">
+                <h4>Signs You Need a Roof Repair</h4>
+                <p>A roof doesn't have to be leaking during a storm to be in trouble &mdash; undetected leaks are one of the most common causes of premature roof failure. We repair blistering, cracking, and peeling surfaces, missing and loose shingles, leaky skylights, and roofs of every type: metal, tar &amp; gravel, and flat roofs.</p>
+                <ul>
+                  <li>Leak detection &amp; repair</li>
+                  <li>Missing or blown-off shingles</li>
+                  <li>Blistering, cracking &amp; peeling surfaces</li>
+                  <li>Leaky skylights &amp; roof coating options</li>
+                </ul>
+                <p>Call us at (781) 874-0095 and let Mass Roofing and Gutters protect your home from leaks and damage.</p>
+                <a href="tel:7818740095" class="btn btn-navy">Call (781) 874-0095</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="img"><img src="website_graphics/hail-damage.jpg" alt="Close-up of hail damage on asphalt shingles"></div>
+        <div class="body">
+          <h3>Ice Dam Repair</h3>
+          <p>Ice dams form when snow melts and refreezes at your roof's edge &mdash; it only takes a little ice to back water up under your shingles.</p>
+          <ul>
+            <li>Ice Dam Removal</li>
+            <li>Leak &amp; Water Damage Prevention</li>
+            <li>Winter Emergency Response</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/storm-damage-tree.jpg" alt="Winter storm damage to a home"></div>
+              <div class="details-text">
+                <h4>How Ice Dams Damage Your Home</h4>
+                <p>When snow accumulates on your roof, a cycle of melting and refreezing begins to build a growing block of ice that prevents melting snow from properly running off. Melting snow that puddles up can start to leak back under the roof's shingles, causing expensive damage to ceilings, walls, floors, and even furniture &mdash; especially on homes with a low roof slope.</p>
+                <p>Think you have an ice dam? Call Mass Roofing at (781) 874-0095.</p>
+                <a href="tel:7818740095" class="btn btn-navy">Call (781) 874-0095</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" id="gutters">
+        <div class="img"><img src="website_graphics/copper-roof-porch.jpg" alt="Copper roof and gutter detail on a covered porch"></div>
+        <div class="body">
+          <h3>Gutter Installation</h3>
+          <p>We install, repair, and maintain gutters and downspouts of every make and type &mdash; plus accessories that protect your home from water damage.</p>
+          <ul>
+            <li>Gutter &amp; Downspout Installation</li>
+            <li>Residential &amp; Commercial</li>
+            <li>Replacement &amp; Repair</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/roofing-job-2.jpg" alt="Gutter and roofline detail on a home"></div>
+              <div class="details-text">
+                <h4>Gutter Types &amp; Materials</h4>
+                <p>Old, damaged, or debris-clogged gutters and downspouts aren't just a nuisance &mdash; they can cause expensive damage to the interior and exterior of your home. Aluminum is the material of choice for most installations because it's lightweight and can be fitted to any home, but we also install K-style, seamless metal, copper, galvanized, PVC, and wood gutters.</p>
+                <ul>
+                  <li>K-Style &amp; seamless metal gutters</li>
+                  <li>Copper &amp; galvanized gutters</li>
+                  <li>PVC &amp; wood gutters</li>
+                  <li>Gutter guards, cleaning &amp; repair</li>
+                </ul>
+                <a href="tel:7818740095" class="btn btn-navy">Need Gutters? Call Us Today!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card" id="contracting">
+        <div class="img"><img src="website_graphics/deck-build-2.jpg" alt="Deck construction in progress"></div>
+        <div class="body">
+          <h3>General Contracting</h3>
+          <p>We build, remodel, or renovate nearly any part of your home &mdash; from a minor update to a total home improvement.</p>
+          <ul>
+            <li>Vinyl &amp; Natural Siding</li>
+            <li>Decks &amp; Porches</li>
+            <li>Foundation &amp; Sill Work</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/roofer-action.jpg" alt="Contractor working on a roof in fall"></div>
+              <div class="details-text">
+                <h4>One Call for the Whole Project</h4>
+                <p>Mass Roofing &amp; Gutters can build, remodel, or renovate nearly any part of your home. Whether you're planning a major home improvement, a minor update, or your home is in need of repair, our team can help &mdash; with renovations that fit any budget.</p>
+                <ul>
+                  <li>Roof, gutter &amp; downspout installation</li>
+                  <li>Decks, porches &amp; foundation work</li>
+                  <li>Natural &amp; vinyl siding</li>
+                  <li>Doors &amp; windows installed or replaced</li>
+                  <li>Ice dam repair &amp; prevention</li>
+                </ul>
+                <a href="tel:7818740095" class="btn btn-navy">Discuss Your Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="img"><img src="website_graphics/windows-house.jpg" alt="Home with large replacement windows"></div>
+        <div class="body">
+          <h3>Replacement Windows</h3>
+          <p>Save on energy costs with new replacement windows. We offer all types &mdash; from Double-Hung to Bay to Casement.</p>
+          <ul>
+            <li>Double-Hung &amp; Casement</li>
+            <li>Bay, Bow &amp; Picture Windows</li>
+            <li>Patio Doors &amp; Garden Windows</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/cape-house-roof.jpg" alt="Cape-style home with new windows and siding"></div>
+              <div class="details-text">
+                <h4>Windows Built for Comfort &amp; Value</h4>
+                <p>Professional installation of quality vinyl replacement windows and patio doors, customized to your home and style. New windows increase the value of your home, improve energy efficiency, reduce outside noise, and protect furniture and flooring from UV damage. Choose from a large selection of styles, wood-grain options, grid patterns, and colors.</p>
+                <ul>
+                  <li>Double-Hung (most popular) &amp; Single-Hung</li>
+                  <li>Casement, Awning &amp; Slider Windows</li>
+                  <li>Bay, Bow &amp; Picture Windows</li>
+                  <li>Patio Doors &amp; Garden Windows</li>
+                </ul>
+                <a href="tel:7818740095" class="btn btn-navy">Get a Free Price Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="img"><img src="website_graphics/siding-home.jpg" alt="Colonial home with new siding"></div>
+        <div class="body">
+          <h3>Vinyl Siding</h3>
+          <p>Low-maintenance vinyl siding is an alternative to house painting and a great way to improve the curb appeal of your home.</p>
+          <ul>
+            <li>Insulated &amp; Lap Siding</li>
+            <li>Shakes, Shingles &amp; Trim</li>
+            <li>Soffit, Fascia &amp; Shutters</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/roofing-job-1.jpg" alt="Home exterior renovation in progress"></div>
+              <div class="details-text">
+                <h4>Low-Maintenance Curb Appeal</h4>
+                <p>New vinyl siding can dramatically reduce the cost of maintaining the exterior of your home &mdash; no more painting, staining, or caulking, just a clean with mild soap and a rinse from the garden hose. We install Mastic and Norandex brand siding along with a full range of accessories.</p>
+                <ul>
+                  <li>Insulated &amp; lap siding</li>
+                  <li>Vertical siding, shakes &amp; shingles</li>
+                  <li>Soffit, fascia &amp; trim</li>
+                  <li>Shutters, vents &amp; mounting blocks</li>
+                </ul>
+                <a href="tel:7818740095" class="btn btn-navy">Click For a Free Estimate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="img"><img src="website_graphics/deck-build-1.jpg" alt="Deck and porch rebuilding project"></div>
+        <div class="body">
+          <h3>Decks &amp; Porches</h3>
+          <p>Many older homes have decks or porches that are failing and need proper replacement by qualified contractors. Porch demo &amp; rebuilding.</p>
+          <ul>
+            <li>Porch Rebuilding</li>
+            <li>Deck Building</li>
+            <li>Code-Compliant Construction</li>
+          </ul>
+          <button type="button" class="card-link expand-toggle" aria-expanded="false">See Full Details <span class="chevron">&darr;</span></button>
+          <div class="details">
+            <div class="details-inner">
+              <div class="details-media"><img src="website_graphics/deck-build-2.jpg" alt="Composite deck under construction"></div>
+              <div class="details-text">
+                <h4>Rebuilt to Code, Built to Last</h4>
+                <p>Is your front or back porch old and worn? Is it safe and built to city code? Your front porch is what people see first on your home, so skimping on repairing or replacing it can hurt your home's value. Our qualified carpenters rebuild porches to code and to the architecture of your home &mdash; from footers to railings to decking.</p>
+                <ul>
+                  <li>Porch rebuilding &amp; front porch replacement</li>
+                  <li>Deck building &amp; design</li>
+                  <li>Code-compliant construction</li>
+                  <li>Footers, railings &amp; decking</li>
+                </ul>
+                <a href="tel:7818740095" class="btn btn-navy">Call for a Free Estimate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-mist" id="about">
+  <div class="container">
+    <div class="split">
+      <div class="media">
+        <img src="website_graphics/victorian-roof-project.jpg" alt="Roofing crew working on a Victorian home in Greater Boston">
+      </div>
+      <div>
+        <span class="eyebrow">We Put The Roof Over Boston's Head</span>
+        <h2>A Reputation for Excellence and Integrity</h2>
+        <p>Houses in Greater Boston come in all shapes and sizes, and each one has its own unique character. No matter what kind of roof you live under, you can trust the experts at Mass Roofing &amp; Gutters with your next project &mdash; from Colonials to Cape Cod-style homes, Queen Anne Victorians to modern duplexes.</p>
+        <p>Mass Roofing &amp; Gutters is a fully-licensed and insured Massachusetts-based business (License #: 126232), and our neighbors have trusted us with their homes for more than three decades. We pride ourselves on the highest quality work at the best possible price, because our clients aren't just our customers &mdash; they're our community.</p>
+        <div class="stat-row">
+          <div class="stat"><strong>30+</strong><span>Years in business</span></div>
+          <div class="stat"><strong>80+</strong><span>Towns served</span></div>
+          <div class="stat"><strong>#126232</strong><span>MA license</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="eyebrow">No Job Is Too Big or Too Small</span>
+        <h2>We're Ready When You Are</h2>
+        <p>People don't spend much time thinking about their roof, gutters, porches, decks, doors, or windows &mdash; until there's a problem: missing shingles, leaks, or snow, hail, and ice damage. Whether you just noticed the first signs of trouble or have been waiting for the right time to take action, we're always available to help.</p>
+        <div class="feature-rows">
+          <div class="feature-row">
+            <div class="icon">1</div>
+            <div><h4>Free Estimate</h4><p>Call or visit our contact page and we'll promptly reply, or visit your home at your convenience.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="icon">2</div>
+            <div><h4>The Best Materials</h4><p>Slate, asphalt, and composite roof coverings; galvanized, copper, wood, and PVC gutters; pre-fabricated and custom windows, doors, siding, and decking.</p></div>
+          </div>
+          <div class="feature-row">
+            <div class="icon">3</div>
+            <div><h4>Quality Workmanship</h4><p>From the peak of your roof to the foundation of your house, our experts handle projects of any size.</p></div>
+          </div>
+        </div>
+        <a href="tel:7818740095" class="btn btn-navy" style="margin-top:1.8em;">Call (781) 874-0095</a>
+      </div>
+      <div class="media">
+        <img src="website_graphics/roof-shingle-install-2.jpg" alt="Roofer installing shingles on a residential roof">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="financing">
+  <div class="container">
+    <div class="financing-banner">
+      <img src="website_graphics/financing-badge.png" alt="Easy financing available badge">
+      <div class="financing-text">
+        <h3>Payments as Low as $99.00 Per Month!</h3>
+        <p>Ask us about flexible financing options so you can take care of your roof, gutters, or siding project on your schedule &mdash; not just your budget.</p>
+      </div>
+      <a href="#contact" class="btn btn-accent">Ask About Financing</a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-navy">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow" style="color:var(--accent);">Why Homeowners Choose Us</span>
+      <h2>Built On Trust, Backed By Decades of Work</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="num">01</div><h4>Licensed &amp; Insured</h4><p>Massachusetts license #126232, fully insured for residential and commercial work.</p></div>
+      <div class="why-card"><div class="num">02</div><h4>30+ Years Local</h4><p>Three decades serving the same Greater Boston neighborhoods, one roof at a time.</p></div>
+      <div class="why-card"><div class="num">03</div><h4>Free Estimates</h4><p>No-obligation, in-person estimates on your schedule &mdash; call or email anytime.</p></div>
+      <div class="why-card"><div class="num">04</div><h4>Total Exteriors</h4><p>Roofing, gutters, siding, windows, decks and porches &mdash; one crew, start to finish.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-mist">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Reviews</span>
+      <h2>What Our Customers Are Saying</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"They put a new roof on our Cape in under two days, cleaned up everything, and the price was exactly what was quoted. Couldn't ask for more."</p>
+        <div class="testi-name">Homeowner &mdash; Medford, MA</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Called about a leak after a storm and they were out within a day. Fixed the flashing and replaced our gutters while they were at it."</p>
+        <div class="testi-name">Homeowner &mdash; Somerville, MA</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Professional from the first estimate to the final walkthrough. Our triple-decker's roof and gutters look better than new."</p>
+        <div class="testi-name">Property Owner &mdash; Dorchester, MA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Recent Work</span>
+      <h2>Projects Around Greater Boston</h2>
+    </div>
+    <div class="gallery-grid">
+      <a href="website_graphics/roofing-job-1.jpg" class="tall"><img src="website_graphics/roofing-job-1.jpg" alt="Roofing project in Dorchester, MA"></a>
+      <a href="website_graphics/roof-shingle-install.jpg"><img src="website_graphics/roof-shingle-install.jpg" alt="Shingle roof installation"></a>
+      <a href="website_graphics/copper-roof-porch.jpg"><img src="website_graphics/copper-roof-porch.jpg" alt="Copper roof over a covered porch"></a>
+      <a href="website_graphics/roof-install-team.jpg" class="tall"><img src="website_graphics/roof-install-team.jpg" alt="Roofing crew on a multi-family home"></a>
+      <a href="website_graphics/roofing-job-2.jpg"><img src="website_graphics/roofing-job-2.jpg" alt="Roofing project in Dorchester, MA"></a>
+      <a href="website_graphics/roof-shingle-install-2.jpg"><img src="website_graphics/roof-shingle-install-2.jpg" alt="Roofer installing new shingles"></a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-mist" id="service-area">
+  <div class="container">
+    <div class="area-wrap">
+      <div>
+        <span class="eyebrow">Service Area</span>
+        <h2>Proudly Serving Greater Boston</h2>
+        <p>We're based at 470 Main St. in Medford and work throughout the region &mdash; from Acton to Woburn and everywhere in between.</p>
+        <ul class="area-list">
+          <li><strong>Medford</strong></li>
+          <li><strong>Boston</strong></li>
+          <li><strong>Cambridge</strong></li>
+          <li><strong>Somerville</strong></li>
+          <li><strong>Malden</strong></li>
+          <li><strong>Melrose</strong></li>
+          <li><strong>Stoneham</strong></li>
+          <li><strong>Winchester</strong></li>
+          <li><strong>Arlington</strong></li>
+          <li>Allston</li>
+          <li>Andover</li>
+          <li>Belmont</li>
+          <li>Brookline</li>
+          <li>Burlington</li>
+          <li>Chelsea</li>
+          <li>Dorchester</li>
+          <li>Everett</li>
+          <li>Lexington</li>
+          <li>Lynn</li>
+          <li>Newton</li>
+          <li>Quincy</li>
+          <li>Revere</li>
+          <li>Roxbury</li>
+          <li>Salem</li>
+          <li>Saugus</li>
+          <li>Waltham</li>
+          <li>Watertown</li>
+          <li>Wakefield</li>
+          <li>Woburn</li>
+          <li>&amp; 50+ more towns</li>
+        </ul>
+      </div>
+      <div class="media" style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+        <img src="website_graphics/roofing-job-2.jpg" alt="Roofing project completed in Greater Boston">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" id="contact">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--accent);">Get Started</span>
+    <h2>Ready For Your Free Estimate?</h2>
+    <p>Call Mass Roofing &amp; Gutters at (781) 874-0095, send us an email, or fill out our contact form &mdash; we'll promptly reply.</p>
+    <div class="cta-actions">
+      <a href="tel:7818740095" class="btn btn-accent">Call (781) 874-0095</a>
+      <a href="mailto:info@massroofingandgutters.com" class="btn btn-outline">Email Us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="foot-logo" src="website_graphics/logo.png" alt="Mass Roofing & Gutters">
+        <p>Mass Roofing &amp; Gutters is a fully-licensed and insured Massachusetts-based business (License #: 126232), proudly serving Greater Boston for more than three decades.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Google"><img src="website_graphics/google-icon.png" alt="Google"></a>
+          <a href="#" aria-label="Yelp"><img src="website_graphics/yelp-icon.png" alt="Yelp"></a>
+          <a href="#" aria-label="Houzz"><img src="website_graphics/houzz-icon.png" alt="Houzz"></a>
+          <a href="#" aria-label="BBB"><img src="website_graphics/bbb-icon.png" alt="BBB"></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Residential Roofing</a></li>
+          <li><a href="#services">Commercial Roofing</a></li>
+          <li><a href="#gutters">Gutters &amp; Downspouts</a></li>
+          <li><a href="#contracting">Siding</a></li>
+          <li><a href="#services">Replacement Windows</a></li>
+          <li><a href="#contracting">Porches &amp; Decks</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#financing">Financing</a></li>
+          <li><a href="#gallery">Our Work</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>470 Main St.<br>Medford, MA 02155</li>
+          <li><a href="tel:7818740095">(781) 874-0095</a></li>
+          <li><a href="mailto:info@massroofingandgutters.com">info@massroofingandgutters.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; 2026 Mass Roofing &amp; Gutters. All rights reserved.</div>
+      <div style="display:flex;gap:1.4em;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.menu-toggle')?.addEventListener('click', function(){
+    var nav = document.querySelector('.main-nav');
+    var open = nav.style.display === 'block';
+    nav.style.display = open ? 'none' : 'block';
+    nav.style.position='absolute';
+    nav.style.top='100%';
+    nav.style.left='0';
+    nav.style.right='0';
+    nav.style.background='#fff';
+    nav.style.padding='1em 6%';
+    nav.style.boxShadow='0 12px 20px -10px rgba(11,26,44,.2)';
+    var ul = nav.querySelector('ul');
+    ul.style.flexDirection='column';
+    ul.style.gap='1em';
+  });
+
+  document.querySelectorAll('.expand-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.service-card');
+      var details = card.querySelector('.details');
+      var isOpen = card.classList.contains('expanded');
+      if (isOpen) {
+        details.style.maxHeight = details.scrollHeight + 'px';
+        requestAnimationFrame(function(){ details.style.maxHeight = '0px'; });
+        card.classList.remove('expanded');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.firstChild.textContent = 'See Full Details ';
+      } else {
+        card.classList.add('expanded');
+        details.style.maxHeight = details.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+        btn.firstChild.textContent = 'Hide Details ';
+        details.addEventListener('transitionend', function te(){
+          if (card.classList.contains('expanded')) details.style.maxHeight = 'none';
+          details.removeEventListener('transitionend', te);
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
